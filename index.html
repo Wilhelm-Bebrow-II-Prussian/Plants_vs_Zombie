@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h2 style="position: absolute; left: 800px; top: 60px;">Очки:<span class="score">0</span></h2>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; left: 600px;">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; left: 600px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; left: 600px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; left: 600px;">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; left: 600px;">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px; left: 1500px; ">
+		<img class="zombies" src="zombie2.png" style="top: 320px; left: 1500px;">
+		<img class="zombies" src="zombie2.png" style="top: 420px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 520px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 620px; left: 1500px;">
+	</div>
+<script>
+	let shooter = document.querySelectorAll(".shooter");
+	let zombies = document.querySelectorAll(".zombies");
+
+	let step0 = 1500;
+	let step1 = 1500;
+	let step2 = 1500;
+	let step3 = 1500;
+	let step4 = 1500;
+
+	let score = 0;
+
+
+
+	zombies [0].onclick = function(){
+		step0 = step0 - 100;
+		zombies[0].style.left = step0 + "px";
+		console.log(step0)
+		
+		if (step0 == 600) {
+			alert("съел")
+			shooter[0].style.display = "none";
+			score = score + 1;
+			document.querySelector(".score").innerHTML = score;
+			if (score == 2) {alert("Мешки с гноем пришли за тобой!")}
+			if (score == 5) {
+				zombies[0].style.display = "none";
+				zombies[1].style.display = "none";
+				zombies[2].style.display = "none";
+				zombies[3].style.display = "none";
+				zombies[4].style.display = "none";
+				alert("Харэ играть, уроки делай")
+			}
+	}
+}
+
+	zombies [1].onclick = function(){
+		step1 = step1 - 100;
+		zombies[1].style.left = step1 + "px";
+		if (step1 == 600) {
+			alert("cъел")
+			shooter[1].style.display = "none";
+			score = score + 1;
+			document.querySelector(".score").innerHTML = score;
+			if (score == 2) {alert("Мешки с гноем пришли за тобой!")}
+			if (score == 5) {
+				zombies[0].style.display = "none";
+				zombies[1].style.display = "none";
+				zombies[2].style.display = "none";
+				zombies[3].style.display = "none";
+				zombies[4].style.display = "none";
+				alert("Харэ играть, уроки делай")
+			}
+	}
+}
+
+	zombies [2].onclick = function(){
+		step2 = step2 - 100;
+		zombies [2].style.left = step2 + "px";
+
+		if (step2 == 600) {
+			alert("cъел")
+			shooter[2].style.display = "none";
+			score = score + 1;
+			document.querySelector(".score").innerHTML = score;
+			if (score == 2) {alert("Мешки с гноем пришли за тобой!")}
+			if (score == 5) {
+				zombies[0].style.display = "none";
+				zombies[1].style.display = "none";
+				zombies[2].style.display = "none";
+				zombies[3].style.display = "none";
+				zombies[4].style.display = "none";
+				alert("Харэ играть, уроки делай")
+			}
+	}
+}
+
+	zombies [3].onclick = function(){
+		step3 = step3 - 100;
+		zombies [3].style.left = step3 + "px";
+
+		if (step3 == 600) {
+			alert("cъел")
+			shooter[3].style.display = "none";
+			score = score + 1;
+			document.querySelector(".score").innerHTML = score;
+			if (score == 2) {alert("Мешки с гноем пришли за тобой!")}
+			if (score == 5) {
+				zombies[0].style.display = "none";
+				zombies[1].style.display = "none";
+				zombies[2].style.display = "none";
+				zombies[3].style.display = "none";
+				zombies[4].style.display = "none";
+				alert("Харэ играть, уроки делай")
+			}
+	}
+}
+
+	zombies [4].onclick = function(){
+		step4 = step4 - 100;
+		zombies [4].style.left = step4 + "px";
+
+		if (step4 == 600) {
+			alert("cъел")
+			shooter[4].style.display = "none";
+			score = score + 1;
+			document.querySelector(".score").innerHTML = score;
+			if (score == 2) {alert("Мешки с гноем пришли за тобой!")}
+			if (score == 5) {
+				zombies[0].style.display = "none";
+				zombies[1].style.display = "none";
+				zombies[2].style.display = "none";
+				zombies[3].style.display = "none";
+				zombies[4].style.display = "none";
+				alert("Харэ играть, уроки делай")
+			}
+		}
+		
+	}
+
+
+
+
+
+</script>
+</body>
+</html>
